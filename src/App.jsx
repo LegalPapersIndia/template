@@ -83,7 +83,7 @@ const WhatsAppCTA = ({ number = "917505266931" }) => {
 const App = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [activeCategory, setActiveCategory] = useState("All");
-  const myWhatsAppNumber = "917505266931";
+  const myWhatsAppNumber = "+918368060270";
 
   const categories = useMemo(() => ["All", ...new Set(SAMPLES_DATA.map(item => item.category))], []);
 
