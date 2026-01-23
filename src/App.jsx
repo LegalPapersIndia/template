@@ -111,7 +111,7 @@ const App = () => {
               <Sparkles className="w-6 h-6 text-white" />
             </div>
             <h1 className="text-2xl font-black tracking-tight bg-gradient-to-r from-white via-slate-100 to-slate-300 bg-clip-text text-transparent">
-              E-WEBSOLUTIONS
+             LPI-B2B
             </h1>
           </div>
 
