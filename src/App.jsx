@@ -16,7 +16,7 @@ import image11 from "../src/Asset/engi.png";
 import image13 from "../src/Asset/Security.png";
 import image14 from "../src/Asset/Househelp.png";
 import image15 from "../src/Asset/Agri3.png";
-import image16 from "../src/Asset/kitchen.png";
+import image16 from "../src/Asset/Kitchen.png";
 
 const SAMPLES_DATA = [
   { id: 1, title: "Agriculture Pro", category: "Agriculture", image: image5, link: "https://lpi-agri.vercel.app/", description: "International & domestic agro-solutions." },
