@@ -2,7 +2,6 @@ import React, { useState, useMemo, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, MessageCircle, ArrowUpRight, Sparkles, X } from 'lucide-react';
 
-// --- Assets --- (Keeping your imports)
 import image1 from "../src/Asset/pharma.png";
 import image2 from "../src/Asset/agri1.png";
 import image3 from "../src/Asset/Fashion.png";
@@ -17,6 +16,7 @@ import image11 from "../src/Asset/engi.png";
 import image13 from "../src/Asset/Security.png";
 import image14 from "../src/Asset/Househelp.png";
 import image15 from "../src/Asset/Agri3.png";
+import image16 from "../src/Asset/kitchen.png";
 
 const SAMPLES_DATA = [
   { id: 1, title: "Agriculture Pro", category: "Agriculture", image: image5, link: "https://lpi-agri.vercel.app/", description: "International & domestic agro-solutions." },
@@ -33,6 +33,7 @@ const SAMPLES_DATA = [
   { id: 14, title: "Smart Security", category: "Security", image: image13, link: "https://lpi-security.vercel.app/", description: "Surveillance & protection systems." },
   { id: 15, title: "Help Connect", category: "Services", image: image14, link: "https://lpi-househelp.vercel.app/", description: "Reliable domestic help booking." },
   { id: 16, title: "Green Harvest", category: "Agriculture", image: image15, link: "https://lpi-agri2.vercel.app/", description: "Organic farming digital portal." },
+  { id: 17, title: "Cloud Kitchen", category: "Food", image: image16, link: "https://kitchen-flame-eight.vercel.app/", description: "Modern cloud kitchen management system." },
 ];
 
 const WhatsAppCTA = ({ number = "917505266931" }) => {
