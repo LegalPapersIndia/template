@@ -1,1 +1,81 @@
+/* src/index.css */
 @import "tailwindcss";
+
+/* ── Force class-based dark mode (matches your JS toggle) ── */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ── Smooth global transitions ── */
+html {
+  scroll-behavior: smooth;
+  transition: background-color 0.6s ease, color 0.6s ease;
+}
+
+/* ── Color scheme hint for browser UI (scrollbars, inputs, etc.) ── */
+:root {
+  color-scheme: light;
+}
+.dark {
+  color-scheme: dark;
+}
+
+/* ── Design tokens using modern OKLCH (perceptually uniform) ── */
+@layer base {
+  :root {
+    --background: oklch(98.5% 0.015 240);     /* very light cool gray */
+    --foreground: oklch(15% 0.06 260);        /* deep dark text */
+    --muted:     oklch(55% 0.03 240);
+    --muted-foreground: oklch(40% 0.04 260);
+    --card:      oklch(99% 0.005 240);
+    --border:    oklch(88% 0.02 240);
+    --input:     oklch(95% 0.01 240);
+  }
+
+  .dark {
+    --background: oklch(9.5% 0.05 240);       /* deep dark navy-black */
+    --foreground: oklch(96% 0.015 260);       /* bright off-white */
+    --muted:     oklch(65% 0.03 260);
+    --muted-foreground: oklch(80% 0.02 260);
+    --card:      oklch(13% 0.04 240);
+    --border:    oklch(22% 0.06 240);
+    --input:     oklch(18% 0.05 240);
+  }
+
+  body {
+    @apply bg-[--background] text-[--foreground];
+  }
+
+  /* Optional: better input / card defaults */
+  input, textarea, select {
+    background-color: var(--input);
+    color: var(--foreground);
+    border-color: var(--border);
+  }
+
+  .card {
+    @apply bg-[--card] border border-[--border] text-[--foreground];
+  }
+}
+
+/* ── Your background orb pulse animation ── */
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.06);
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 16s infinite ease-in-out;
+}
+
+.delay-1500 {
+  animation-delay: 1.5s;
+}
+
+footer {
+  will-change: background-image, background-color;
+}
